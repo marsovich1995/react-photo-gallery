@@ -65,7 +65,7 @@
     "react-dom": "^17.0.2"
   },
   "scripts": {
-    "build": "nps build",
+    "build": "rollup --config",
     "build:docs": "NODE_ENV=production nps build:docs",
     "start": "webpack-dev-server --progress",
     "lint": "eslint -c ./.eslintrc.js ./src",
