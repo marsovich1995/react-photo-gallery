@@ -528,10 +528,13 @@
   var Gallery = /*#__PURE__*/React.memo(function Gallery(_ref) {
     var photos = _ref.photos,
       onClick = _ref.onClick,
-      direction = _ref.direction,
-      margin = _ref.margin,
+      _ref$direction = _ref.direction,
+      direction = _ref$direction === void 0 ? 'row' : _ref$direction,
+      _ref$margin = _ref.margin,
+      margin = _ref$margin === void 0 ? 2 : _ref$margin,
       limitNodeSearch = _ref.limitNodeSearch,
-      targetRowHeight = _ref.targetRowHeight,
+      _ref$targetRowHeight = _ref.targetRowHeight,
+      targetRowHeight = _ref$targetRowHeight === void 0 ? 300 : _ref$targetRowHeight,
       columns = _ref.columns,
       renderImage = _ref.renderImage;
     var _useState = React.useState(0),
@@ -653,21 +656,6 @@
       });
     })));
   });
-  Gallery.propTypes = {
-    photos: PropTypes.arrayOf(photoPropType).isRequired,
-    direction: PropTypes.string,
-    onClick: PropTypes.func,
-    columns: PropTypes.oneOfType([PropTypes.func, PropTypes.number]),
-    targetRowHeight: PropTypes.oneOfType([PropTypes.func, PropTypes.number]),
-    limitNodeSearch: PropTypes.oneOfType([PropTypes.func, PropTypes.number]),
-    margin: PropTypes.number,
-    renderImage: PropTypes.func
-  };
-  Gallery.defaultProps = {
-    margin: 2,
-    direction: 'row',
-    targetRowHeight: 300
-  };
 
   exports.Photo = Photo;
   exports.default = Gallery;
